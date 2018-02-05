@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'reveal', to: 'users#show'
   get 'login', to: 'sessions#new'
-  get 'logout', to: 'sessions#destroy'
+  get 'logout', to: 'sessions#new'
+  delete 'logout', to: 'sessions#destroy'
   post 'login', to: 'sessions#create'
 end

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :must_login, only: [:show]
   def create
   end
 
@@ -19,5 +20,5 @@ class UsersController < ApplicationController
 
   def update
   end
-  
+
 end
